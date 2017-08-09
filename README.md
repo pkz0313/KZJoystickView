@@ -25,7 +25,7 @@ Set delegate
 Protocol
 
 ```    
-func joystickViewDidEndMoving(_ joystickView: KZJoystickView) {   }
+func joystickViewDidEndMoving(_ joystickView: KZJoystickView) { }
     
 func joystickView(_ joystickView: KZJoystickView, didMoveto angle: Int, distance: Float) { }
 ```
