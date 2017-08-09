@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nv7-TF-bSZ" customClass="KZJoystickView" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="94" y="240" width="187.5" height="187.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gaming-joystick-bg" translatesAutoresizingMaskIntoConstraints="NO" id="i5Q-F7-wTz">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="187.5"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gaming-joystick-thumb" translatesAutoresizingMaskIntoConstraints="NO" id="Mh9-Zv-nud">
+                                        <rect key="frame" x="56" y="56" width="75" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Mh9-Zv-nud" secondAttribute="height" multiplier="1:1" id="7Yq-rI-qdX"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="i5Q-F7-wTz" firstAttribute="leading" secondItem="Nv7-TF-bSZ" secondAttribute="leading" id="2Gb-zc-Ogy"/>
+                                    <constraint firstItem="i5Q-F7-wTz" firstAttribute="top" secondItem="Nv7-TF-bSZ" secondAttribute="top" id="6f9-hJ-Ohh"/>
+                                    <constraint firstItem="Mh9-Zv-nud" firstAttribute="centerX" secondItem="Nv7-TF-bSZ" secondAttribute="centerX" id="FNk-B5-ZzG"/>
+                                    <constraint firstAttribute="trailing" secondItem="i5Q-F7-wTz" secondAttribute="trailing" id="Jlw-8w-BJ6"/>
+                                    <constraint firstItem="Mh9-Zv-nud" firstAttribute="centerY" secondItem="Nv7-TF-bSZ" secondAttribute="centerY" id="cPn-Bn-QUy"/>
+                                    <constraint firstAttribute="bottom" secondItem="i5Q-F7-wTz" secondAttribute="bottom" id="hgx-bl-RK6"/>
+                                    <constraint firstItem="Mh9-Zv-nud" firstAttribute="width" secondItem="Nv7-TF-bSZ" secondAttribute="width" multiplier="0.4" id="kTJ-YW-Ot6"/>
+                                    <constraint firstAttribute="width" secondItem="Nv7-TF-bSZ" secondAttribute="height" multiplier="1:1" id="xkv-JL-aEr"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="backgroundView" destination="i5Q-F7-wTz" id="DJf-0W-Lps"/>
+                                    <outlet property="thumbView" destination="Mh9-Zv-nud" id="hFt-0f-2dU"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="angle: distance:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2h-xw-I5e">
+                                <rect key="frame" x="127.5" y="490" width="120.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="I2h-xw-I5e" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.5" id="1kp-7p-Wfw"/>
+                            <constraint firstItem="I2h-xw-I5e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xvv-Rp-V4d"/>
+                            <constraint firstItem="Nv7-TF-bSZ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="f8t-Vq-J9r"/>
+                            <constraint firstItem="Nv7-TF-bSZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ri2-l7-qRt"/>
+                            <constraint firstItem="Nv7-TF-bSZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ygQ-2d-WVy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="joystickView" destination="Nv7-TF-bSZ" id="p8R-mo-jaV"/>
+                        <outlet property="label" destination="I2h-xw-I5e" id="J9t-Bm-cvY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gaming-joystick-bg" width="903" height="903"/>
+        <image name="gaming-joystick-thumb" width="258" height="258"/>
+    </resources>
+</document>
