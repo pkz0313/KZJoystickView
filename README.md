@@ -29,3 +29,11 @@ func joystickViewDidEndMoving(_ joystickView: KZJoystickView) {   }
     
 func joystickView(_ joystickView: KZJoystickView, didMoveto angle: Int, distance: Float) { }
 ```
+# Example
+Clone or download and run the example project
+
+# Requirement
+iOS 8.0+
+
+# License
+This is released under the MIT license.
