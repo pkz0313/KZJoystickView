@@ -33,7 +33,7 @@ func joystickView(_ joystickView: KZJoystickView, didMoveto angle: Int, distance
 Clone or download and run the example project
 
 # Requirement
-iOS 8.0+
+iOS 8.0+, Swift3.0+
 
 # License
 This is released under the MIT license.
